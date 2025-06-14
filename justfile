@@ -21,7 +21,7 @@ generate:
 # Run dnsperf test.
 test:
     [ -f {{domain_file}} ] || just generate
-    dnsperf -d {{domain_file}} -s $SERVER -p $PORT -m $MODE -c $CLIENT_COUNT -t $TIMEOUT
+    dnsperf -d {{domain_file}} -s $SERVER -p $PORT -m $MODE -c $CLIENT_COUNT -t $TIMEOUT -T $THREADS
 
 # Print server and port information.
 info:
